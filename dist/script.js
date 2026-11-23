@@ -1,3 +1,3 @@
-'use strict';
+"use strict";
 
-document.getElementById('year').textContent = String(new Date().getFullYear());
+document.getElementById("year").textContent = String(new Date().getFullYear());

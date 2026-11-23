@@ -619,3 +619,96 @@ h3 {
     transform: none;
   }
 }
+
+/* Keep ordering visible at the first screen and beside every menu item. */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.order-primary {
+  background: #17633d;
+}
+.order-primary:hover {
+  background: #10492c;
+}
+.browse-menu {
+  font-size: 14px;
+  font-weight: 600;
+  text-underline-offset: 5px;
+}
+.menu-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  background: var(--yellow);
+}
+.menu-item .item-top {
+  height: auto;
+  min-height: 40px;
+  padding-top: 14px;
+}
+.menu-item .tag {
+  max-width: none;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+.menu-item .portion {
+  margin-bottom: 18px;
+}
+.item-order {
+  display: block;
+  margin-top: auto;
+  padding: 12px 8px;
+  border: 1px solid var(--ink);
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.item-order:hover {
+  background: var(--yellow);
+}
+.mobile-order-bar {
+  display: none;
+}
+@media (max-width: 680px) {
+  body {
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+  .hero-actions {
+    gap: 16px;
+  }
+  .hero-actions .button {
+    padding-inline: 18px;
+  }
+  .menu-item .item-top {
+    min-height: 44px;
+  }
+  .item-order {
+    font-size: 13px;
+  }
+  .mobile-order-bar {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    box-shadow: 0 -4px 20px #3d281c12;
+  }
+  .mobile-order-bar .button {
+    width: 100%;
+  }
+}
